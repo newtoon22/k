@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Get the IP of the web
-read -p -n 0 "The first is search the IP with ping -c domain.com"
-read -p -n 0 "Now put the IP in the next line"
+echo "The first is search the IP with ping -c domain.com"
+echo "Now put the IP in the next line"
 echo 
 echo
 echo ========================================
@@ -12,9 +12,10 @@ echo ========================================
 echo
 echo
 # Run
-
-echo "You can leave now with ctrl+c"
-read -p -n 0 "Press a key and shot!"
+echo
+echo ========================================
+echo ===             KBOOM                ===
+echo ========================================
 # Use slowloris with proxychains for do a dns to the IP, send every two seconds 6000 packages
 # for the port 80, using the protocol 2.
 etherap &&
