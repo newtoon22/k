@@ -7,7 +7,7 @@
 # GoldenEye https://github.com/jseidl/GoldenEye
 
 # EtherApe GUI network activity https://en.wikipedia.org/wiki/EtherApe
-sudo apt-get --yes install etherape
+sudo aptitude install etherape
 sudo chmod +x run.sh
 
 exit
