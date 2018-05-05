@@ -1,0 +1,48 @@
+Download
+https://github.com/ethicalhack3r/DVWA/archive/master.zip
+
+Moveremos la descargar a de la manera que ustedes quieran.
+
+/var/www/html
+
+Le daremos permisos a la carpeta DVWA, con el siguiente comando:
+chmod -R 777 dvwa
+
+Ahora crearemos al base de datos para DVWA, y le asignaremos el usuario para ello:
+ ervice mysql start
+ mysql -u root -p 
+ mysql > create database dvwa;
+ mysql > CREATE USER 'user'@'127.0.0.1' IDENTIFIED BY 'pass';
+ mysql > grant all on dvwa.* to 'user'@'127.0.0.1';
+ mysql > flush privileges;
+ mysql > exit
+service mysql stop
+
+Ahora vamos a editar la conexión DVWA,
+ gedit /var/www/html/dvwa/config/config.inc.php
+
+$_DVWA = array();
+$_DVWA[ 'db_server' ] = '127.0.0.1';
+$_DVWA[ 'db_database' ] = 'dvwa';
+$_DVWA[ 'db_user' ] = 'root';
+$_DVWA[ 'db_password' ] = 'pass'; 
+
+Instalaremos algunos módulos necesarios de PHP en Kalilinux,
+add-apt-repository 'http://ftp.de.debian.org/debian sid main'
+apt-get update
+apt-get install php5-gd
+
+Ahora vamos editar nuestro PHP5,
+gedit /etc/php5/apache2/php.ini
+
+Modificaremos de Off a On las siguientes lineas,
+
+allow_ur_fope: On
+allow_url_include: On
+
+Ahora reiniciamos y comenzamos,
+service apache2 restart && service mysql start
+
+y entramos desde el navegador al instalador DVWA:
+
+http://127.0.0.1/dvwa/setup.php
