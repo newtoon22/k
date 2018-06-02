@@ -1,0 +1,14 @@
+# Lo primero es actualizar
+
+sudo apt-get update
+sudo apt-get upgrade
+
+# Instalar Github
+
+sudo apt-get install git
+
+# Instalar Leafpad
+
+sudo apt-get install leafpad
+
+
