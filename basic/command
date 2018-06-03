@@ -1,0 +1,12 @@
+# RESOLUTION
+
+# xrandr -s 1280x1024
+
+# Add a new resolution, example 1920x1080 and 60 Hz
+# First take the values with cvt
+
+cvt 1920x1080 60
+# Response Modline ...
+
+# Now add the new resolution with the values
+xrandr --newmode "1920x1080".... vysh hsyx
