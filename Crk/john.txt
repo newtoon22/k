@@ -1,0 +1,13 @@
+Instalar:
+sudo apt install john
+
+Test de rendimiento de la herramienta:
+john --test
+
+Para iniciar el programa
+john file.txt
+
+El diccionario se crean con archivos: *.lst
+
+Para utilizar un diccionario se usa
+john --wordlist=password.lst password.txt
