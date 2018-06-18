@@ -1,0 +1,49 @@
+Comandos:
+rcrack - Crackeador de pass
+
+rtgen - Genera tablas rainbow
+
+rtsort - Ordena tablas rainbow
+
+rt2rtc - Convierte tablas rainbow de .rt a .rtc
+
+rtc2rt - Convierte tablas rainbow de .rtc a .rt
+
+rcrack --help 
+
+Ejemplos:
+
+rcrack rt_files [rt_files …] -l hash_list_file
+rcrack rt_files [rt_files …] -f pwdump_file
+rcrack rt_files [rt_files …] -n pwdump_file
+
+rt_files: 		Ruta de la tabla rainbow, comodínes soportados (*,?).
+-h hash: 		Carga un solo hash.
+-l hash_list_file: 	Lee hashes desde un archivo, cada hash debe ir en una línea.
+-f pwdump_file: 	Carga hashes lanmanager desde un archivo pwdump.
+-n pwdump_file: 	Lee hashes ntlm desde un archivo pwdump.
+
+Creacion de una tabla:
+
+1. rtgen lm numeric *  *  *  *  *  all
+	            |  |  |  |  |  -|------ Sufijo del Fichero
+                    |  |  |  | -|---------- 800000
+		    |  |  | -|------------- 2100
+		    |  | -|---------------- Indice de la tabla Rainbow
+		    | -|------------------- Longitud Maxima de la Contrasena
+                   -|---------------------- Longitud Minima de la Contrasena
+
+
+
+lm: tipo de firma digital; LM, NTLM, MD5 y SHA1.
+numeric: conjunto de caracteres definido en el fichero.
+
+2. Revisar el nombre del archivo generado
+ls
+
+3. Cambiar el nombre del archivo generado
+mv nombre_largo.rt name.rt
+
+4. Ordenar Tabla
+rtsort name.rt -s
+Donde la s es para que ordene de arriba hacia abajo.
