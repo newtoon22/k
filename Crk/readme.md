@@ -1,7 +1,7 @@
 # Criptografia
 
-<div class=text-justify>En criptografía, el cifrado es un procedimiento que utiliza un algoritmo de cifrado con cierta clave _(clave de cifrado)_ transforma un mensaje, sin atender a su estructura lingüística o significado, de tal forma que sea incomprensible o, al menos, difícil de comprender a toda persona que no tenga la clave secreta _(clave de descifrado)_ del algoritmo.</div>
-  
+**En criptografía**, el cifrado es un procedimiento que utiliza un algoritmo de cifrado con cierta clave _(clave de cifrado)_ transforma un mensaje, sin atender a su estructura lingüística o significado, de tal forma que sea incomprensible o, al menos, difícil de comprender a toda persona que no tenga la clave secreta _(clave de descifrado)_ del algoritmo.
+
 Las claves de cifrado y de descifrado pueden ser iguales _Criptografía simétrica_, _Criptografía asimétrica_ o _Criptografía híbrida_.
 
 
