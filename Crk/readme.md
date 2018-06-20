@@ -33,7 +33,7 @@ Comando para unir archivo shaow que es donde estan las contrasenas.
 * /etc/passwd: contiene los usuarios en Linux, visible para todos los usuarios.
 * /etc/shadow: contiene las claves de Linux, solo permiso lectura para root.
 
-````bash
+```bash
 unshadow /etc/passwd /etc/shadow > /home/Desketop/pass.txt
 ```
 
