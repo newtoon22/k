@@ -1,0 +1,13 @@
+hydra web.com <protocol> -s <port> "/<end link>/" -L <address usr.txt> -P <address pass.txt> 
+
+  -l User
+  -L User List
+  -p Password
+  -P Password List
+  -vV Opcion Verbose
+  -R Restaurar sesion de la ultima vez que fue utilizada
+  -t Numero de Intentos
+
+SSH test
+hydra -l root -p admin 192.168.1.105 -t 4 ssh
+https://linuxconfig.org/ssh-password-testing-with-hydra-on-kali-linux
