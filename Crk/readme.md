@@ -1,8 +1,8 @@
 # Criptografia
 
-<div class=text-justify> En criptografía, el cifrado es un procedimiento que utiliza un algoritmo de cifrado con cierta clave _(clave de cifrado)_ transforma un mensaje, sin atender a su estructura lingüística o significado, de tal forma que sea incomprensible o, al menos, difícil de comprender a toda persona que no tenga la clave secreta _(clave de descifrado)_ del algoritmo.
+<div class=text-justify>En criptografía, el cifrado es un procedimiento que utiliza un algoritmo de cifrado con cierta clave _(clave de cifrado)_ transforma un mensaje, sin atender a su estructura lingüística o significado, de tal forma que sea incomprensible o, al menos, difícil de comprender a toda persona que no tenga la clave secreta _(clave de descifrado)_ del algoritmo.</div>
   
-Las claves de cifrado y de descifrado pueden ser iguales _Criptografía simétrica_, _Criptografía asimétrica_ o _Criptografía híbrida_.</div>
+Las claves de cifrado y de descifrado pueden ser iguales _Criptografía simétrica_, _Criptografía asimétrica_ o _Criptografía híbrida_.
 
 
 ## Programas a utilizar:
@@ -65,7 +65,7 @@ characterset = El juego de caracteres que se usará para generar las contraseña
 ```
 
 
-### Unshadow
+#### Unshadow
 
 Comando para unir archivo shaow que es donde estan las contrasenas.
 
@@ -79,7 +79,7 @@ unshadow /etc/passwd /etc/shadow > /home/Desketop/pass.txt
 Une los archivos pass con shadow para luego ser crackeado con John.
 
 
-### SAM
+#### SAM
 
 1. Crear una carpeta donde alojar la información
 ```bash
