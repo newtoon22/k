@@ -6,6 +6,10 @@ Las claves de cifrado y de descifrado pueden ser iguales _Criptografía simétri
 
 ## Programas a utilizar:
 
+### Hydra
+
+Programa de fuerza bruta a servicios online como _FTP_, _SSH_, _MySQL_, _POP3_, _Telnet_, etc.
+
 ### John the Ripper:
 
 John the Ripper es un programa para comprobar rubustez de una contrasena.
@@ -38,4 +42,35 @@ unshadow /etc/passwd /etc/shadow > /home/Desketop/pass.txt
 ```
 
 Une los archivos pass con shadow para luego ser crackeado con John.
+
+### Diccionarios
+
+Son archivos de texto, mayormente terminal .lst que pueden incluir multitud de palabras comunes y pueden crearse personalizados con información que se le proporcionen, pueden crearse mediante scripts como:
+
+* [CUPP](https://github.com/Mebus/cupp)
+```
+python cupp.py
+```
+```
+  -h Menu
+  -i Diccionario Personalizado
+  -w Perfilar diccionario existente
+  -l Descarga listas de palabras al azar
+  -a Analizar usr y pass
+  -v Version del programa
+```
+
+* [Crunch](https://tools.kali.org/password-attacks/crunch)
+
+```
+crunch <min> <max> <caractereset> -t <patron> -o file.lst
+man crunch
+```
+```
+min = La longitud mínima de la contraseña.
+max = La longitud máxima de la contraseña.
+characterset = El juego de caracteres que se usará para generar las contraseñas.
+-t <patrón> = El patrón especificado de las contraseñas generadas.
+-o <archivo de salida> = Este es el archivo en el que desea que se escriba su lista de palabras.
+```
 
