@@ -1,0 +1,41 @@
+#!/bin/bash
+
+mkdir /opt && cd /opt
+
+# Install OpenVPN
+
+sudo apt update
+sudo apt-get install openvpn
+
+# Install EASY-RSA
+# https://github.com/OpenVPN/easy-rsa/releases
+
+wget https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.4/EasyRSA-3.0.4.zip
+unzip EasyRSA-3.0.4.zip
+
+# Setup VARS of Easy-RSA 3
+cd EasyRSA-3.0.4
+cp $pwd/vars /opt/EasyRS-3.0.4
+
+# Setup PKI
+./easyrsa init-pki > /opt/install.log
+./easyrsa build-ca
+
+# PKI without pass
+# ./easyrsa build-ca nopass
+
+# Create certificate for server and sing with the CA
+./easyrsa gen-req servidor-openvpn-redeszone nopass >> /opt/install.log
+
+# Sing server
+read -p "Name server"name
+./easyrsa sign-req server server-openvpn-$name >> /opt/install.log
+
+# Create User
+./easyrsa gen-req pp-openvpn-$name nopass
+
+# Sing User
+./easyrsa sign-req client pp-openvpn-$name
+
+
+
