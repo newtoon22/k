@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# https://www.redeszone.net/redes/openvpn/
 mkdir /opt && cd /opt
 
 # Install OpenVPN
