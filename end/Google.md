@@ -52,3 +52,35 @@ Donde;
 
 2. Restringiendo IP
 
+Con el archivo *.htaccess* podemos restringir la entrada a ciertos directorios de nuestra web, ejmplo:
+```.htaccess
+order allow, deny allow from 190.0.0.0
+allow from tu_ip
+deny from all
+```
+
+Con eso solo permetirá acceder a esa carpeta desde la IP especificada y denegara la entrada a todas las demás.
+
+3. Autentificación de usuario
+
+Podemos hacer que un usuario pueda autentificarse para acceder a la carpeta, con el mismo uso del archivo *.htaccess* que creamos anterior.
+
+```.htaccess
+AuthType Basic
+AuthName "Mensaje de restricción"
+AuthUserFile /dir/.htpasswd
+Require valid-user
+```
+
+* **AuthType Basic** Petición de autentificación
+* **AuthName** Mostrará un aviso de que el directorio está restringido.
+* **AuthUserFile** Directorio del archivo .htpasswd
+* **Require valid-user** Indica que cualquier usuario en .htpasswd tiene acceso.
+* **.htpasswd** Archivo donde indica usuario:contrasena
+
+```.htaccess
+admin:passwd
+```
+
+
+
