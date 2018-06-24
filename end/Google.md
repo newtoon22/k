@@ -28,7 +28,7 @@ Son técnicas para hackear páginas web o servidores usando la búsqueda avanzad
 
 ### Herramientas
 
-* [BDock](https://github.com/deathanym/bdork.git)Ñ Automatiza Dork
+* [BDock](https://github.com/deathanym/bdork.git) Automatiza Dork
 * [Google Hacking Database](https://www.exploit-db.com/google-hacking-database/): Base de datos de instrucciones para buscar vulnerabilidades.
 
 
