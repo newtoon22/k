@@ -62,6 +62,19 @@ Connection: close
 --httprequest_end--
 ```
 3. Colocar "__SQL2INJECT__" en el **Parametro** a inyectar.
+4. Configurar los parametros de seguridad a partir de la **línea 105**
+```sqlninja.conf
+# Evasion techniques to be used. Possible choices are:
+1 - Query hex-encoding
+2 - Comments as separators
+# 3 - Random case
+4 - Random URI encoding
+# All techniques can be combined, so the following is legal:
+# evasion = 1234
+# However, keep in mind that using too many techniques at once leads to very
+# long queries, that might create problems when using GET. Default: no evasion
+evasion = 124
+``` 
 
 **TIPS:**
 * Para metodos **POST** debemos de usar el *https://* y borrar la linea de *Content Length*.
