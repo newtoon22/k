@@ -35,7 +35,6 @@ Son técnicas para hackear páginas web o servidores usando la búsqueda avanzad
 ### Protección:
 
 1. Evitar indexado
-===============================
 
 Con la creación de un archivo _robots.txt_ prohibimos indexado a ciertos archivos, solo hay que subir el archivo a la carpeta raíz de la web.
 
